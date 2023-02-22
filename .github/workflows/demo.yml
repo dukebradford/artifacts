@@ -40,7 +40,7 @@ jobs:
       - name: Publish js filename
         id: zappa
         run: find dist/assets/*.js -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';'
-        # the above script-file was often written with :: set-output namescript-file::
+        # above script-file was often written with :: set-output namescript-file::
         # but that is being phased out by Github
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
